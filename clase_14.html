@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Uso de Break y Continue</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Uso de Break y Continue</h1>
+        <script>
+            console.log("**********Uso de Break-Continue**********")
+            const arreglo = []
+            for (let i = 1; i <= 50; i++) {
+                arreglo.push(i)             
+            }
+
+            /* for (let i = 0; i < arreglo.length; i++) {
+                console.log(arreglo[i])
+            } */
+
+            //mostramos solo los numeros pares
+            for (let i = 0; i < arreglo.length; i++) {
+                if(arreglo[i]%2 != 0){
+                    continue
+                }                
+                console.log(arreglo[i])
+            }
+
+            //terminamos el bucle al llegar al numero 25
+            for (let i = 0; i < arreglo.length; i++) {
+                console.log(arreglo[i])
+                if(arreglo[i]==25){
+                    break;
+                }                
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Destructuracion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Destructuracion JavaScript</h1>
+        <script>
+            console.log("**********Destructuracion**********")
+            const numeros = [1,2,3]
+            //sin destructuracion
+            let uno = numeros[0], dos = numeros[1], tres = numeros[2]
+            console.log(uno,dos,tres)
+
+            //usando destructuracion
+            const [one,two, three] = numeros
+            console.log(one,two,three)
+
+
+            const persona = {
+                nombre: "Daniel",
+                apellido: "Gonzalez",
+                edad: 28,
+            }
+            //con los objetos es necesario que tengan el mismo nombre las variables que las propiedades de los objetos
+            //ya que sino genera un error de undefined
+            let {nombre, apellido, edad} = persona
+            console.log(nombre, apellido, edad)
+        </script>
+    </body>
+</html>

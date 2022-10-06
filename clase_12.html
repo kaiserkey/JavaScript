@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Bucles en JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Estructuras Repetitivas Bucles en JavaScript</h1>
+        <script>
+            //las estructuras repetitivas while y do-while ya no son tan utilizadas en la programacion en javascript
+            console.log("**********Estrura While**********")
+            let contador = 0
+            while(contador<=10){
+                console.log("Valor de Contador en el Ciclo WHILE: ", contador)
+                contador++
+            }
+
+            console.log("**********Estrura Do-While**********")
+            do{
+                console.log("Valor de Contador en el Ciclo DO-WHILE: ", contador)
+                contador++
+            }while(contador<=10)//la diferencia entre while y do-while es que el do-while se ejecuta al menos una vez el bloque dentro del do
+            //mientras que en el while depende de la consicion del while
+
+            console.log("**********Estrura For**********")
+            const arreglo0=["Rojo", "Azul", "Negro", "Verde"]
+            for (let i = 0; i < arreglo0.length; i++) {
+                console.log(`Indice del arreglo ${i} -> ${arreglo0[i]}`);                
+            }
+
+            console.log("**********Estrura For-Each**********")
+            arreglo0.forEach(function (element, index){
+                console.log(`${index} -> ${element}`) 
+            });
+
+            console.log("**********Estrura For-In**********")
+            //me permite recorrer las propiedades de un objeto
+            const persona = {
+                nombre: "Daniel",
+                edad: 28,
+                email: "kaiserkey2@gmail.com"
+            }
+
+            for(const key in persona) {
+                console.log(`Objeto Persona: Clave -> ${key} -- Propiedad -> ${persona[key]}`)
+            }
+
+            console.log("**********Estrura For-Of**********")
+            //me permite recorrer todos los elementos de cualquier elemnto que sea iterable en javascript
+            let cadena = "Hello World!!"
+            for(const iterator of cadena) {
+                console.log(iterator)//por ejemplo se puede rrecorrer una cadena de texto facilemente con for-of
+            }
+
+        </script>
+    </body>
+</html>

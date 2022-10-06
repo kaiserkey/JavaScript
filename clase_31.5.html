@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Logica de Programacion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Logica de Programacion</h1>
+        <script>
+            /* 6) Programa una función para contar el número de 
+            veces que se repite una palabra en un texto largo, pe. 
+            miFuncion("hola mundo adios mundo", "mundo") devolverá 2 */
+
+            let myText = "Lorem ipsum dolor sit dolor amet consectetur dolor adipisicing elit.";
+            let word = "dolor"
+
+            const contarPalabras = (text="", palabra="")=> {
+                if(!text) return console.warn("Se ingreso un texto vacio.");
+                if(!palabra) return console.warn("No se ha ingresado una palabra para buscar.");
+                if(!(typeof text === 'string' || text instanceof String)) return console.error("La variable texto no es un texto");
+                if(!(typeof palabra === 'string' || palabra instanceof String)) return console.error("La variable palabra no es un texto");
+                let contador = 0;
+                let temporal = text.split(" ");
+                for (let i = 0; i < temporal.length; i++) if(temporal[i]==palabra){contador++}
+                
+                return console.info(`La palabra ${palabra}, se repite ${contador} veces`);
+            };
+            contarPalabras(myText,word);
+            
+        </script>
+    </body>
+</html>

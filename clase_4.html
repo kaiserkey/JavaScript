@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>JavaScript NUmeros</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>JavaScript Manejo de Números</h1>
+        <script>
+            console.log("**********Definicion de Variables Númericas**********")
+            let a = 23
+            let b = new Number(34)
+            let c = 3.14
+            let d = "5.333"
+            let e = "23 numero loco 3"
+            console.log("Numero Primitivo: " + a,"Objeto Numero: " + b)
+            console.log("Especifica la cantidad de nuemros decimales que se muestran: " , c.toFixed(5))
+            console.log("Transforma un String numerico a un tipo numero en forma entera", parseInt(c), parseInt(d))
+            //los tipos numericos String y Interger se concatenasn al hacer una suma 
+            console.log("Concatenacion al realizar una suma por distintos tipos de datos", c+d)
+            console.log("Sumar numeros de tipo string con numero de tipo interger o float: ", c + parseFloat(d))
+            console.log(parseInt(e))//parseInt solo toma el numero si esta al comienzo de la cadena de texto, el resto no es tomado en cuenta
+            
+
+
+        </script>
+    </body>
+</html>

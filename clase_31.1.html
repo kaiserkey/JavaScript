@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Logica de Programacion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Logica de Programacion</h1>
+        <script>
+            /* 2) Programa una función que te devuelva el texto recortado según el número de 
+            caracteres indicados, pe. miFunción("Hola Mundo", 4) devolverá "Hola" */
+            
+            let myText = `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Nostrum pariatur natus officia id vel reiciendis, atque dolor est 
+            aliquam magnam fugiat possimus tempora exercitationem. 
+            Adipisci saepe tempora quos dolor totam?`;
+
+            const isString = (text) => (typeof text === 'string' || text instanceof String) 
+                                        ? true
+                                        : false;
+
+            //Usando arrow function
+            const recortar = (text = "", longitud) => 
+                                    (!text) 
+                                    ? console.warn("Cadena Vacia...")
+                                    : (isString(text)) 
+                                        ? console.info(text.slice(0,longitud)) 
+                                        : console.warn("La variable no es un texto");
+
+            
+            recortar(myText, 5)
+            
+        </script>
+    </body>
+</html>

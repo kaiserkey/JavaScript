@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Objetos Literales</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Objetos Literales</h1>
+        <script>
+            console.log("**********Objetos Literales**********")
+            let nombre = "kira", edad = 5
+
+            const gato = {
+                nombre: nombre,
+                edad: edad,
+                maullar: function (){
+                    console.log("Miau Miau!!")
+                }
+            }
+
+            gato.maullar()
+
+            console.log("**********Usando Objetos Literales**********")
+            const cat = {
+                /* Simplificamos el metodo anterior de asignacion de variables con el mismo nombre
+                asignandole a la propiedad una variable que tenga el mismo nombre, agilizando el 
+                proceso de escritura del codigo */
+                nombre,
+                edad,
+                maullar(){
+                    console.log("Miau Miau!!")
+                }
+            }
+            console.log(nombre, edad+ " Años Dice")
+            cat.maullar()    
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Fundamentos de JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Fundamentos de JavaScript</h1>
+        <script>
+            console.log("**********Uso de Variables**********")
+
+            var hola = "Hola Mundo" //ambito global, es una mala practica
+            let hello = "Hello World" //ambito de bloque
+            console.log(hola)
+            console.log(hello)
+            
+            console.log("**********Uso del Objeto Window**********")
+            console.log(window) //representa el objeto que mapea toda la ventana del navegador para javascript
+            console.log(window.hola) //existe en el ambito global
+            console.log(window.hello) //no existe en el ambito global, solo existe en el bloque en el que fue definido
+            
+            console.log("**********Uso de Var**********")
+
+            var anime = "Ghost In The Shell"
+            console.log("Variable 'anime' antes del bloque", anime)
+
+            {
+                var anime = "Sidonia No Kishi"
+                console.log("Variable 'anime' dentro de otro bloque", anime)
+            }
+
+            console.log("Variable 'anime' despues del bloque", anime)
+
+            console.log("**********Uso de Let**********")
+
+            let anime2 = "Ghost In The Shell"
+            console.log("Variable 'anime' antes del bloque", anime2)
+
+            {
+                let anime2 = "Sidonia No Kishi"
+                console.log("Variable 'anime' dentro de otro bloque", anime2)
+            }
+            
+            console.log("Variable 'anime' despues del bloque", anime2)
+        </script>
+    </body>
+</html>

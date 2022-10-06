@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Funciones Anonimas Autoejecutables</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Funciones Anonimas Autoejecutables</h1>
+        <script>
+            /**
+             * Muchas librerias utilizan esta caracteristica de javascript, es un patron muy utilizado
+            */
+            
+            //definicion de funcion anonima autoejecutable
+            (function (){ 
+                console.log("My primer funcion anonima autoejecutada - IIFE en ingles")
+            })();//aqui si o si va punto y coma para separar de otros fragmentos de codigo
+
+            (function (a,b){ 
+                console.log(a,b)
+            })(window,console);//pasamos parametros a la funcion anonima
+
+            //diferentes formas de escribir una funcion anonima
+            //la crockford (javascript the god parts)
+            ((function (){ 
+                console.log("Version Crockford")
+            })());
+
+            //Unaria
+            +function (){ 
+                console.log("Version Unaria")
+            }();
+
+            //facebook
+            !function (){ 
+                console.log("Version Facebook")
+            }();
+        </script>
+    </body>
+</html>

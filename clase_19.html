@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Prototipos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Prototipos JavaScript</h1>
+        <script>
+            console.log("**********Programacion Basada en Prototipos**********")
+            //JavaScript es un lenguaje de programacion multiparadigma
+            /* La orientacion a objetos es muy diferente a otros lenguajes basados en clases 
+            como C ó Java, la programacion orientada a objetos se implementa mediante prototipos */
+            //objeto literal sin constructor
+            const gato = {
+                //atributos - variables
+                nombre: "Kira",
+                edad: 5,
+
+                //metodos - funciones
+                setNombre(nombre){
+                    this.nombre = nombre
+                },
+
+                setEdad(edad){
+                    this.edad = edad
+                },
+                getNombre(){
+                    return this.nombre
+                },
+
+                getEdad(){
+                    return this.edad
+                },
+
+                maullar(){
+                    console.log("Miau Miau!!")
+                }
+            }
+            gato.setNombre("Kirai")
+            console.log(gato)
+            
+            //funcion constructora
+            function Animal(nombre, edad, sonido){
+                this.nombre = nombre,
+                this.edad = edad,
+                this.hacerSonido = function(){//esta forma es ineficiente ya que genera repeticion de codigo en el constructor
+                    console.log(this.sonido)
+                }
+            }
+
+            const myGato = new Animal("Kira",5,"Miau Miau!")
+            console.log(myGato)
+
+            function Animal2(nombre, edad, sonido){
+                this.nombre = nombre,
+                this.edad = edad
+            }
+            
+            Animal2.prototype.hacerSonido = function(){//de esta forma evitamos la repeticion de codigo en el constructor
+                console.log(this.sonido)//con esto se logra una mejora en el rendimiento y memoria de nuestro codigo
+            }
+            const myGato2 = new Animal2("Kira",5,"Miau Miau!")
+            console.log(myGato2)
+            
+
+        </script>
+    </body>
+</html>

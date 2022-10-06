@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Estructuras de Control</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Estructuras de Control JavasScript</h1>
+        <script>
+            console.log("**********Estruras de Control**********")
+            //Estructuras condicionales, if-else, switch-case, ?: -> Operador ternario
+            let edad = 18
+            if(edad>=18){//si se cumple la condicion se ejecuta este bloque de codigo
+                console.log("El usuario es mayor de edad!!")
+            }else{//si no se cumple la condicion se ejecuta este otro bloque de codigo
+                console.log("El usuario no es mayor de  edad!!")
+            }
+
+            let opcion = 2
+
+            switch(opcion){//segun lo que contenga la variable opcion se va a ejecutar un caso diferente
+                case 1: console.log("Se ejecuta el caso 1")//en caso de que opcion valga 1 se ejecuta esta opcion
+                        break
+                case 2: console.log("Se ejecuta el caso 2")//en caso de que opcion valga 2 se ejecuta este caso
+                        break
+                case 3: console.log("Se ejecuta el caso 3")
+                        break
+                default: console.log("Se ejecuta el caso por defecto, ya que no coincide ningun caso...")
+                        break
+            }
+
+            let pais = "Argentina"
+
+            if(pais === "EE.UU"){
+                console.log("It's America!!")
+            }else if(pais === "Mexico"){
+                console.log("Esta Chido!!")
+            }else if(pais==="Argentina"){
+                console.log("Aguante Argentina Papa!!")
+            }else{
+                console.log("De Donde Eres!?...")
+            }
+
+            //operacion ternario
+            let ternario = (edad>=18) 
+            ? "Eres Mayor de Edad"
+            :"Eres Menor de Edad"
+            
+            console.log(ternario)
+
+        </script>
+    </body>
+</html>

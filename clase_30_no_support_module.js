@@ -1,0 +1,1 @@
+console.log("Archivo js para navegadores que no soportan modulos +ES6")

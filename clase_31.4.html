@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Logica de Programacion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Logica de Programacion</h1>
+        <script>
+            /* 5) Programa una función que invierta las palabras de una cadena de texto, pe. 
+            miFuncion("Hola Mundo") devolverá "odnuM aloH" */
+
+
+            let myText = 'Lorem';
+            
+            const invertirTexto = (text="")=>(
+                (!text) 
+                ? console.warn("EL texto esta vacio...")
+                : (!(typeof text === 'string' || text instanceof String))
+                    ? console.error("La variable no es un texto")
+                    : console.info(text.split("").reverse().join(""))
+                
+            );
+
+            invertirTexto(myText);
+        </script>
+    </body>
+</html>

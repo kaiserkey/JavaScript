@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Objeto Date</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Objeto Date</h1>
+        <script>
+            //definicion de un objeto fecha
+            let fecha = new Date()
+            //fecha completa
+            console.log(fecha)
+            //dia del mes
+            console.log(fecha.getDate())
+            //dia de la semana
+            console.log(fecha.getDay())
+            //mes, los meces comienzan desde 0 ya que estan almacenados en un arreglo
+            console.log(fecha.getMonth())
+            //año
+            console.log(fecha.getFullYear())
+            //horas
+            console.log(fecha.getHours())
+            console.log(fecha.getMinutes())
+            console.log(fecha.getSeconds())
+            //datos completos
+            console.log(fecha.toDateString())
+            console.log(fecha.toLocaleDateString())
+            console.log(fecha.toLocaleTimeString())
+            console.log(fecha.getTimezoneOffset())
+            console.log(Date.now())
+        </script>
+    </body>
+</html>

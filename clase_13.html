@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Manejo de Errores</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Manejo de Errores en JavaScript</h1>
+        <script>
+            console.log("**********Manejo de Errores Try-Catch**********")
+            try {
+                console.log("Aqui se agrega el codigo a evaluar")
+                variableNoDeclarada
+                console.log("Este bloque de codigo no se ejecuta ya que salta el arror anterior")
+            } catch (error) {
+                console.log("Se encarga de capturar cualquier error que genere el codigo anterior")
+                console.log(`Error que se capturo: ${error}`)
+            }finally{
+                console.log("Se ejecutara siempre al final de un bloque try-catch")
+            }
+
+            console.log("**********Try-Catch Personalizado**********")
+            //Se puede acceder al objeto error para personalizar el error lanzado
+            try {
+                let numero = "bd"
+                if(isNaN(numero)){
+                    throw new Error("El caracter no es un numero...")
+                }
+
+                console.log(`El numero es: ${numero}`)
+            } catch (error) {
+                console.log(`Se produjo el siguiente error: ${error}`)
+            }
+        </script>
+    </body>
+</html>

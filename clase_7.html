@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Funciones en JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Funciones en JavaScript</h1>
+        <script>
+            /**
+             * Una funcion es un bloque de codigo, autocontenido, que se puede definir una
+             * vez y ejecutarse en cualquier momento.
+             * Opcionalmente una funcion puede aceptar parametros y devolver un valor.
+             * 
+             * Las funciones en javascript se consideran objetos y 
+             * pueden devolver o no un valor, pueden ser asignadas como 
+             * un parametro en otra funcion y tambien puedes retornar la ejecucion de otra funcion
+             * dentro de una funcion, entre otras muchas otras caracteristicas
+             * 
+             * */
+            console.log("**********Declaracion de Funciones**********")
+            //funcion declarada que no devuleve nada
+            function myFunction1(){
+                let hola = "Hello World!!"
+                console.log("Esto es una funcion que no retorna nada: ", hola)
+            }
+            //invocacion de la funcion
+            myFunction1()
+
+            function myFunction2(){
+                let hola = "Hello World!!"
+
+                return "Esto es una funcion que retorna: "+hola
+            }
+
+            console.log(myFunction2())
+            
+            function myFUnction3(texto){
+                console.log("Esto es una funcion que recibe un parametro y lo imprime: ",texto)
+            }
+
+            myFUnction3("Hello World!!")
+
+            function myFUnction4(a=0,b=0){
+                return `La suma de ${a} Y ${b} es: ${a+b}`
+            }
+
+            console.log("Esta es una funcin que retorna la suma de dos numeros ingresados por parametro: ", myFUnction4(2,8))
+            
+            //se ude asignar una funcion auna variable, la cual no puede ser invocada antes de ser declarada
+            const funcionExpresada = function (){ console.log("Esto es una funcion expresada que fue asignada a una variable") }
+
+            funcionExpresada()
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Herencia Prototipica</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>JavaScript Herencia Prototipica</h1>
+        <script>
+            //herencia prototipica
+            console.log("**********Programacion Basada en Prototipos**********")
+            function Animal(nombre, genero, sonido){
+                this.nombre = nombre;
+                this.genero = genero;
+                this.sonido = sonido;
+            }
+            
+            Animal.prototype.hacerSonido = function(){
+                console.log(this.sonido);
+            }
+
+            //funcion que hereda de animal
+            function Perro(nombre, genero, tamanio){
+                this.super = Animal;
+                this.super(nombre, genero);
+                this.tamanio = tamanio;
+            }
+
+            //aqui se realiza la herencia de perro-animal
+            Perro.prototype = new Animal()
+            Perro.prototype.constructor = Perro 
+
+            //sobrescritura de metodos del prototipo podre en el hijo
+            Perro.prototype.hacerSonido = function(){
+                console.log("Guau Guau!");
+            }
+            
+            const perrito = new Perro("Pichicho", "Se cree caniche!", "Mediano")
+            const myGato = new Animal("Kira",5,"Miau Miau!")
+
+            console.log(perrito)
+            console.log(myGato.hacerSonido())
+
+        </script>
+    </body>
+</html>

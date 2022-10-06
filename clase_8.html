@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Arreglos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Arreglos en JavaScript</h1>
+        <script>
+            console.log("**********Declaracion de Arreglos**********")
+            //forma clasica de crear arreglos
+            const array1=[]
+            const array2 = [1, true, "Hola", ["A", "B", "C"]]
+            console.log(array1)
+            console.log(array2[3][0])
+            console.log(array2.length)
+
+            //otra forma de crear arreglos
+            const array3 = Array.of("A", "B", [1,2,3])
+            console.log(array3)
+            //esta forma es antigua y ya no se usa tanto
+            const array5 = new Array(1,2,3,4)
+            console.log(array5)
+
+            //el objeto array tiene muchos metodos utiles
+            const array4 = Array(100).fill(true)
+            console.log(array4)
+
+            const colores = ["Rojo", "Negro", "Azul"]
+            colores.push("Verde")
+            console.log(colores)
+            colores.pop()
+            console.log(colores)
+
+            //el primer parametro es el elemento del arreglo y el segundo el indice
+            colores.forEach(function (element, index){ 
+                console.log(`${index} -> ${element}`) 
+            })
+
+            console.log(colores)
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Variables Indefinidas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Variables indefinidas, not a number y null</h1>
+        <script>
+            console.log("**********Variable Indefinida(Undefined)**********")
+            let indefinida //undefined representa una variable que no ha sido inicializada
+            //undefined es un valor asignado por javascript cuando detecta que la variable no ha sido inicializada
+            console.log("Esto es una variable indefinida: ",indefinida)
+            console.log("**********Variable NULL**********")
+            let nulo = null //es un valor que intencionalmente es asignado por el programador para definir una variable sin valor
+            console.log("Esto es una variable nula: ", nulo)
+            console.log("**********Variable NaN**********")
+            let noEsUnNumero = "hola" * 3.14 //sucede cuando realizamos operaciones con datos que no son numeros
+            console.log("Esto es una variable NaN: ", noEsUnNumero)
+        </script>
+    </body>
+</html>

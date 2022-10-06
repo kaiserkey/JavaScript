@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Logica de Programacion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Logica de Programacion</h1>
+        <script>
+            /* 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. 
+            miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5 */
+
+
+            let myText = "xyz1, xyz2, xyz3, xyz4 y xyz5";
+
+            function isString(text){
+                if(typeof text === 'string' || text instanceof String){ //comprueba si es un texto o una instancia de una clase String
+                    return true;    
+                }else{
+                    return false;
+                }
+            }
+
+            function eliminarPatron(text, patron){
+                let temporal = text.split(" ");
+                let temporal2 = ""
+                for (let i = 0; i < temporal.length; i++) {
+                    temporal2 += " " + temporal[i].replace(patron, "")
+                }
+                return temporal2;               
+            }
+            
+            if(isString(myText)){
+                console.log(eliminarPatron(myText, "xyz"))
+            }else{
+                console.log("No es un texto...", myText);
+            }
+            
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Logica de Programacion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Logica de Programacion</h1>
+        <script>
+            /* 4) Programa una función que repita un texto X veces, pe. 
+            miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo */
+
+            let myText = 'Lorem';
+
+            const repetirTexto = (text="", numero=undefined)=>{
+                if(!text) return console.warn("EL texto esta vacio...");
+                if(numero === undefined) return console.warn("Ingresa un numero de veces...");
+                if(!(typeof text === 'string' || text instanceof String)) return console.error("La variable no es un texto");
+                if(Math.sign(numero) === -1) return console.warn("El numero de veces no puede ser negativo...");
+                for (let i = 0; i < numero; i++) {console.log(`${text} - ${i+1}`);};
+            }
+            repetirTexto(myText, 4);
+                
+        </script>
+    </body>
+</html>

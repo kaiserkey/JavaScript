@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Metodos Estaticos, Getter y Setter</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Metodos Estaticos, Getter y Setter</h1>
+        <script>
+            //en javascript no existen los metodos privados o publicos al igual que para las variables
+            //un metodo estatico es aquel que se puede instanciar sin necesidad de instanciar la clase
+            class Perro {
+                nombre;
+                tamanio;
+                raza;
+
+                constructor(nombre,tamanio,raza){
+                    this.nombre = nombre;
+                    this.tamanio = tamanio;
+                    this.raza = raza;
+                }
+
+                setNombre(nombre){
+                    this.nombre = nombre;
+                }
+
+                setTamanio(tamanio){
+                    this.tamanio = tamanio;
+                }
+
+                setRaza(raza){
+                    this.raza = raza;
+                }
+
+                getNombre(){
+                    return this.nombre;
+                }
+
+                getTamanio(){
+                    return this.tamanio;
+                }
+
+                getRaza(){
+                    return this.raza;
+                }
+
+                static info(){
+                    console.log("Los perros son considerados los mejores amigos del hombre...");
+                }
+            }
+            Perro.info()
+            const perrito = new Perro()
+            console.log(perrito)
+            perrito.setNombre("Pipo")
+            perrito.setRaza("Se cree caniche")
+            perrito.setTamanio("Perro Pichicho")
+
+            console.log(`Perro nombre ${perrito.getNombre()} 
+                        raza ${perrito.getRaza()} 
+                        tamaño ${perrito.getTamanio()}`)
+            
+            
+        </script>
+    </body>
+</html>

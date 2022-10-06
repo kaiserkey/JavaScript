@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Operador de Cortocircuito</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Operador de Cortocircuito</h1>
+        <script>
+            /* 
+            Cortocircuito OR - cuando el valor de la izquierda en la expresion siempre pueda validar
+            a true, es el valor que se cargara por defecto.
+            Cortocircuito AND - cuando el valor de la izquierda siempre pueda validar a false, es el valor
+            que se cargara por defecto.
+            */
+
+            function saludar(nombre){
+                nombre = nombre || "Desconocido"
+                console.log(`Hola ${nombre}`)
+            }
+
+            saludar("Daniel")
+
+            console.log("cadena"||"valor derecha")
+            console.log(19||"valor derecha")
+            console.log(true||"valor derecha")
+            console.log({}||"valor derecha")
+            console.log([]||"valor derecha")
+            console.log(false||"valor derecha")
+            console.log(null||"valor derecha")
+            console.log(NaN||"valor derecha")
+            console.log(undefined||"valor derecha")
+            console.log(""||"valor derecha")
+            console.log(-2||"valor derecha")
+            console.log(0||"valor derecha")
+
+            console.log("********************")
+            console.log("cadena"&&"valor derecha")
+            console.log(19&&"valor derecha")
+            console.log(true&&"valor derecha")
+            console.log({}&&"valor derecha")
+            console.log([]&&"valor derecha")
+            console.log(false&&"valor derecha")
+            console.log(null&&"valor derecha")
+            console.log(NaN&&"valor derecha")
+            console.log(undefined&&"valor derecha")
+            console.log(""&&"valor derecha")
+            console.log(-2&&"valor derecha")
+            console.log(0&&"valor derecha")
+        </script>
+    </body>
+</html>

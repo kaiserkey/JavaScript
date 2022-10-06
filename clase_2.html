@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Variables Constantes</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Variables Constantes en JavaScript</h1>
+        <script>
+            console.log("**********Uso de Variables Constantes**********")
+            const PI = 3.14 // no es posible declarar una constante sin un valor
+            console.log("El valor de la constante PI es: ",PI)
+            //no puedo redefinir el valor de la constante PI
+            // PI = 3 <-- esto no se puede hacer
+
+            console.log("**********Uso de Booleanos**********")
+            let pi = PI > 3
+            console.log("Imprime: ",pi)
+            pi = PI > 4
+            console.log("Imprime: ",pi)
+            console.log("**********Uso de Objetos**********")
+            let Persona = {
+                nombre: "Daniel",
+                edad: 28
+            }
+            console.log("Esto es un objeto: " , Persona)
+            console.log("**********Uso de Arreglos**********")
+            let colores = ["blue", "red", "green", "yellow"]
+            console.log("Esto es un arreglo: ", colores)
+
+            console.log("**********Agregar Elementos Objeto**********")
+            Persona.correo = "kaiserkey2@gmail.com"
+            console.log("Esto es un objeto despues de agregarle el elemento correo: " , Persona)
+
+            console.log("**********Agregar Elementos Arreglo**********")
+            colores.push("black")
+            console.log("Esto es un arreglo despues de agregarle el nuevo color: " , colores)
+            
+            console.log("**********Modificar Elementos de una Constante**********")
+            const Objetos = {
+                elemento1 : "Hola",
+                elemento2: "Adios"
+            }
+            //en javascript se puede cambiar el valor de una constante siempre y cuando no sena valores primitivos
+            //si son arreglos u objetos si se le puede agregar o quitar elementos
+            
+            Objetos.elemento3 = "Wiiii"
+            console.log("Esto es un objeto de tipo const despues de agregarle el elemento3: " , Objetos)
+
+            const arreglo1 = ["elemento1", "elemento2"]
+            arreglo1.push("elemento3")
+            console.log("Esto es un arreglo de tipo const despues de agregarle el elemento3: " , arreglo1)
+
+        </script>
+    </body>
+</html>

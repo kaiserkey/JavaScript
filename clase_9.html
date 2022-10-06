@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Objetos en JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Objetos en JavaScript</h1>
+        <script>
+            //en javascript todo es un objeto
+            //los objetos se pueden trabajar con la palabra reservada const ya que asi evitamos cambiar la referencia del objeto
+            //pero podemos cambiar su estado interno
+            console.log("**********Declaracion de Objetos**********")
+            //este es el metodo mas usado para declarar un objeto
+            const objeto1 = {}
+            console.log(objeto1)
+            //este metodo es menos comun
+            const objeto2 = new Object()
+            console.log(objeto2)
+
+            /**
+             * dentro de un objeto a las variables se le llaman atributos o propiedades mientras
+             * que a las funciones se les denomina metodos
+            */
+            const persona = {
+                nombre: "Daniel",
+                apellido: "Gonzalez",
+                edad: 28,
+                contacto: {
+                    email: "kaiserkey2@gmail.com",
+                    movil: "2657235343",
+                    twitter: "@kaiserkey_"
+                },
+                pasatiempos: ["Aikido", "Leer", "Programar", "Jugar Videojuegos"],
+                saludar: function (){console.log("Hello World!! :D")},
+                decirNombre: function (){
+                    console.log(`Hola mi nombre es ${this.nombre} ${this.apellido} y me puedes seguir como ${this.contacto.twitter}`)
+                },
+            }
+
+            console.log(persona)
+            console.log(persona["contacto"])
+            console.log(persona.contacto.twitter)
+            persona.saludar()
+            console.log(persona.pasatiempos[1])
+            persona.decirNombre()
+            console.log(Object.keys(persona))
+            console.log(Object.values(persona))
+            console.log(persona.hasOwnProperty("nombre"))
+            console.log(persona.hasOwnProperty("asd"))
+            
+        </script>
+    </body>
+</html>

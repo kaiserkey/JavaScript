@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Modulos (Export - Import)</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Modulos (Export - Import)</h1>
+        <!-- Los acrchivos javascript siempre se deben llamar antes del cierre de la etiqueta body para evitar que 
+        el documento html se sobrecarge de archivos pesados al inicio, si no se coloca la palabra module no se puede usar
+        la palbra import en el eacrivo js importado -->
+        <script src="clase_30.js" type="module"></script>
+        <!-- Misma version que el module anterior pero para navegadores que no soportan modulos -->
+        <script src="clase_30_no_support_module.js" nomodule></script>
+    </body>
+</html>

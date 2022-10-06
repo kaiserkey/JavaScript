@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Logica de Programacion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Logica de Programacion</h1>
+        <script>
+            /* 1) Programa una función que cuente el número de caracteres de 
+            una cadena de texto, pe. miFunción("Hola Mundo") devolverá 10 */
+            let myText = `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Nostrum pariatur natus officia id vel reiciendis, atque dolor est 
+            aliquam magnam fugiat possimus tempora exercitationem. 
+            Adipisci saepe tempora quos dolor totam?`;
+
+            function isString(text){
+                if(typeof text === 'string' || text instanceof String){ //comprueba si es un texto o una instancia de una clase String
+                    return true;    
+                }else{
+                    return false;
+                }
+            }
+
+            function tamanno(text=""){
+                if(!text){
+                    console.warn("No ingresaste ninguna cadena.");
+                }else{
+                    console.info(`El tamaño del texto es de ${text.length} caracteres.`); 
+                }
+            }
+
+            
+            tamanno(myText);
+        </script>
+    </body>
+</html>

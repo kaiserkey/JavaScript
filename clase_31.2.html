@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Logica de Programacion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Logica de Programacion</h1>
+        <script>
+            /* 3) Programa una función que dada una String te devuelva un Array de 
+            textos separados por cierto caracter, pe.
+            miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'] */
+
+            let myText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.';
+
+            const isString = (text) => (typeof text === 'string' || text instanceof String) 
+                                        ? true
+                                        : false;
+
+            const subCadenas = (text="", separador=undefined)=>(
+                (!text)
+                ? console.warn("Cadena Vacia...")
+                : (isString(text))
+                    ? (separador===undefined)
+                        ? console.warn("Separador no valido")
+                        : console.log(text.split(separador))
+                    : console.warn("La variable no es un texto")
+                        
+            );
+
+            subCadenas(myText, " ");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Logica de Programacion</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Logica de Programacion</h1>
+        <script>
+            /* 7) Programa una función que valide si una palabra o frase dada, 
+            es un palíndromo (que se lee igual en un sentido que en otro), 
+            pe. mifuncion("Salas") devolverá true */
+
+
+            let myText = "alla";
+
+            function isString(text){
+                if(typeof text === 'string' || text instanceof String){ //comprueba si es un texto o una instancia de una clase String
+                    return true;    
+                }else{
+                    return false;
+                }
+            }
+
+            function invertCadena(text){     
+                let newText = "";
+                for (let i = (text.length - 1); i >= 0; i--) {
+                    newText += text[i];
+                }
+                return newText;
+            }
+
+            function palindromo(text){     
+                let esPalindromo = false;
+                let temporal = invertCadena(text);
+                return temporal.toLowerCase()===text.toLowerCase();                
+            }
+            
+            if(isString(myText)){
+                if(palindromo(myText)){
+                    console.log("La palabra es un palindromo!");
+                }else{
+                    console.log("No es un palindromo!");
+                }
+            }else{
+                console.log("No es un texto...", myText);
+            }
+            
+
+        </script>
+    </body>
+</html>

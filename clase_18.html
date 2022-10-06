@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Arrrow Function</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Arrow Function JavasScript</h1>
+        <script>
+            /* Una funcion expresada es cuando a una variable le asignas el valor de una funcion anonima */
+            let myFUncion = function (){ console.log("Hello World!!")}
+            myFUncion()
+
+            console.log("**********Arrow Function**********")
+            
+            const saludar = () => console.log(`Hello World!!`)
+            saludar()
+
+            const saludar2 = texto => console.log(`${texto}`)
+            saludar2("Hola Loco!")
+            //en caso de que tenga varios parametros se usa parentesis
+            const sumar = (a,b) => a+b//aqui hay un return implicito
+            console.log(sumar(2,2))
+            
+
+            const sumar2 = (a,b, ...c) => {//arrow function de varias lineas
+                let sumatoria = a+b
+
+                c.forEach( element => {//las arrow function tambien se pueden utilizar en los metodos de los objetos foreach
+                    sumatoria += element
+                })
+                return sumatoria
+            }
+            console.log(sumar2(2,2,3,5,8))
+
+            /* Hay que tener cuidado a la hora de usar arrow function dentro de objetos literales, ya que estas se saltan
+            el objeto al que hace referencia this referenciando al objeto padre Window */
+
+            const perro = () => {
+                console.log(this)
+            }
+
+            perro()
+
+            /* NO es buena practica usar arrow function en objetos literales */
+
+            const perrito = {
+                ladrar: () => {
+                    console.log(this)//deberia hace rreferencia a perrito pero hace referencia al objeto padre window
+                }
+            }
+
+            perrito.ladrar()
+
+            const perritoBueno = {
+                nombre: "Perrito",
+                edad: 5,
+                ladrar(){
+                    console.log(this)//aqui si funciona la referencia al objeto perritoBueno
+                }
+            }
+
+            perritoBueno.ladrar()
+            
+        </script>
+    </body>
+</html>

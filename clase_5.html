@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Tipos de Datos Booleanos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Tipos de Datos Booleanos</h1>
+        <script>
+            console.log("**********Definicion de Variables Booleanas**********")
+            let verdadero = true
+            let falso = false
+            let v = Boolean(true)
+            let f = Boolean(false)
+
+            console.log(verdadero, falso, v, f)
+            console.log(typeof(verdadero), typeof(falso))
+
+            console.log("**********Valores que tienden a ser Verdadero (Truthy)**********")
+            console.log("EL valor 'true': ",Boolean(true))
+            console.log("Un objeto vacio '{}'': ",Boolean({}))
+            console.log("Una lista vacia '[]'': ",Boolean([]))
+            console.log("Un numero positivo '42': ",Boolean(42))
+            console.log("Un texto con un espacio ' ': ",Boolean(" "))
+            console.log("Un texto largo 'false': ",Boolean("false"))
+            console.log("Un tipo de dato fecha 'new Date()': ",Boolean(new Date()))
+            console.log("Un numero negrativo '-42':",Boolean(-42))
+            console.log("EL infinito positivo 'Infinity': ",Boolean(Infinity))
+            console.log("EL infinito negativo 'Infinity': ",Boolean(-Infinity))
+
+            console.log("**********Valores que tienden a Falso (Falsy)**********")
+            console.log("EL valor 'false': ",Boolean(false))
+            console.log("El valor 'null': ",Boolean(null))
+            console.log("El valor 'undefined': ",Boolean(undefined))
+            console.log("El valor '0': ",Boolean(0))
+            console.log("El valor '-0': ",Boolean(-0))
+            console.log("El valor 'NaN': ",Boolean(NaN))
+            console.log("Un texto vacio '': ",Boolean(""))
+        </script>
+    </body>
+</html>

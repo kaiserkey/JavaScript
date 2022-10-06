@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Formas de Definir String y Operaciones</h1>
+
+        <ul>
+            <li>Enero</li>
+            <li>Febrero</li>
+            <li>Marzo</li>
+        </ul>
+        <script>
+            console.log("**********Definicion de String**********")
+            let nombre = "Daniel" // el estandar comun es usar este formato para definir strings
+            let apellido = 'Gonzalez'//este se utiliza pero no es tan comun
+            let objetoString = new String("Hello World")//este es demaciado formal y largo de escribir
+
+            console.log("String nombre con comillas dobles: ", nombre, 
+            "String apellido con comillas simples: ", apellido,
+            "String definido como un objeto: ", objetoString)
+
+            console.log("El tamaño de nombre es: : ", nombre.length)
+            console.log("El tamaño de apellido es: : ", apellido.length)
+            console.log("El tamaño del objeto String es: : ", objetoString.length)
+
+            console.log("Pasar a mayusculas una cadena de texto (String): ", objetoString.toUpperCase())
+            console.log("Pasar a minusculas una cadena de texto (String): ", objetoString.toLowerCase())
+            console.log("Comprobar si se encuentra un determinado contenido en un String: ", objetoString.includes("Hello"))
+            console.log("Comprobar si se encuentra un determinado contenido en un String: ", objetoString.includes("kkk"))
+            console.log("Eliminar espacios en blanco de una cadena de texto (String): ", objetoString.trim())
+            console.log("Separar una cadena de texto (String) por un determinado contenido: ", objetoString.split(""))
+        
+            console.log("**********Concatenacion de Strings**********")
+
+            let text1 = "Hello"
+            let text2 = "World"
+
+            //la primera forma de concatenar variables de texto en javascript es la siguiente
+            textoCompleto = text1 + " " + text2
+            console.log(textoCompleto)
+
+            //la segunda opcion para concatenar variables es usar la interpolacion de variables
+            //template string
+
+            textoCompleto2 = `${text1} ${text2}`
+            console.log("Texto usando template string: ", textoCompleto2)
+            
+            //con template string el texto o codigo colocado se imprime tal cual esta
+            let ul = `
+                <ul>
+                    <li>Enero</li>
+                    <li>Febrero</li>
+                    <li>Marzo</li>
+                </ul>`
+            console.log(ul)
+        </script>
+    </body>
+</html>

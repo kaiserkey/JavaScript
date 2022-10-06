@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Clases POO JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Clases POO JavaScript</h1>
+        <script>
+            /* Javascript desde el año 2015 implementa las clases para 
+            mejorar la sintaxis de la programacion orientada a objetos
+            pero internamente las convierte a prototipos */
+
+            class Animal {
+                nombre;
+                edad;
+                genero;
+
+                constructor(nombre, edad, genero){
+                    this.nombre = nombre;
+                    this.edad = edad;
+                    this.genero = genero;
+                }
+
+                hacerSonido(){
+                    console.log("Miau Miau");
+                }
+            }
+
+            const myCat = new Animal("Kira", 3, "Hembra")
+            console.log(myCat)
+            myCat.hacerSonido()
+
+            class Perro extends Animal {
+                tamanio;
+
+                constructor(nombre,edad,genero,tamanio){
+                    super(nombre, edad, genero);
+                    this.tamanio = tamanio;
+                }
+
+                hacerSonido(){
+                    console.log("Guau Guau!");
+                }
+            }
+
+            const myDog = new Perro("Pichicho", 3, "Macho", "Se Cree Caniche")
+            console.log(myDog)
+            myDog.hacerSonido()
+        </script>
+    </body>
+</html>

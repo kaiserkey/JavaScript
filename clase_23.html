@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <title>Objeto Console</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Objeto Console</h1>
+        <script>
+            //el objeto console tiene muchas funciones utiles
+            console.log(console)
+            console.error("Esto es un error!!")
+            console.warn("Esto es un aviso!!")
+            console.info("Esto es un mensaje informativo!!")
+            console.log("Esto es un registro de lo que pasa en nuestra aplicacion!!")
+
+            let nombre = "Daniel", apellido = "Gonzalez", edad = 28
+
+            console.log(nombre,apellido,edad)
+            console.log(`Hola mi nombre es ${nombre} ${apellido} y tengo ${edad} años`)
+
+            //uso de cmodines para imprimir mensajes
+            console.log(`Hola mi nombre es %s %s y tengo %d años`, nombre,apellido,edad)
+
+            //console.clear()
+            console.log(window)
+            console.log(document)
+            console.dir(window)
+            console.dir(document)
+
+            console.group("Pestaña desplegable!!")
+            console.log("1...Aqui van las distintas opciones")
+            console.log("2...")
+            console.log("3...")
+            console.log("4...")
+            console.groupEnd()
+
+            console.table(Object.entries(console))
+
+            const numeros = [1,2,3,4,5], vocales = ["a", "e", "i", "o", "u"]
+            console.table(numeros)
+            console.table(vocales)
+
+            const cat = {
+                nombre: "kira",
+                color: "negro",
+                comidaFavorita: "pollo",
+            }
+
+            console.table(cat)
+
+            console.time("Cuanto tiempo tarda este codigo...")
+            let arreglo = Array(1000000)//arreglo de un millon de posiciones
+            for (let i = 0; i < arreglo.length; i++) {
+                arreglo[i]=i                
+            }
+            console.timeEnd("Cuanto tiempo tarda este codigo...")
+
+            
+            for (let i = 0; i < 10; i++) {
+                console.count("Codigo For")                
+            }
+
+            let x = 1, y = 2
+            let prueba = "Se espera que x sea mayor a y..."
+            console.assert(x>y, {x,y, prueba})
+            
+        </script>
+    </body>
+</html>
