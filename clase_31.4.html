@@ -20,8 +20,14 @@
                 : (!(typeof text === 'string' || text instanceof String))
                     ? console.error("La variable no es un texto")
                     : console.info(text.split("").reverse().join(""))
-                
-            );
+                    /**Join une todos los elementos del arreglo en una cadena, 
+                     * recibe como parametro un separador, si este se omite se
+                     * separa por una coma ",", si posee elementos nulos 
+                     * se convierten a una cadena vacia
+                     * Split separa una cadena por un delimitador y la combierte a un arreglo
+                     * Reverse invierte el orden de los elementos de un arreglo
+                    */
+                    );
 
             invertirTexto(myText);
         </script>
