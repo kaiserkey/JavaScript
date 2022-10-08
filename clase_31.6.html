@@ -15,39 +15,17 @@
 
             let myText = "alla";
 
-            function isString(text){
-                if(typeof text === 'string' || text instanceof String){ //comprueba si es un texto o una instancia de una clase String
-                    return true;    
-                }else{
-                    return false;
-                }
-            }
+            const palindromo = (text)=>(
+                (!text || text === " ")
+                ? console.warn("Se ingreso un texto vacio.")
+                : (!(typeof text === 'string' || text instanceof String))
+                    ? console.error("La variable texto no es un texto")
+                    : (text === text.split("").reverse().join(""))
+                        ? console.info("La palabra es un palindromo.")
+                        : console.info("La no es un palindromo.")
+            )           
 
-            function invertCadena(text){     
-                let newText = "";
-                for (let i = (text.length - 1); i >= 0; i--) {
-                    newText += text[i];
-                }
-                return newText;
-            }
-
-            function palindromo(text){     
-                let esPalindromo = false;
-                let temporal = invertCadena(text);
-                return temporal.toLowerCase()===text.toLowerCase();                
-            }
-            
-            if(isString(myText)){
-                if(palindromo(myText)){
-                    console.log("La palabra es un palindromo!");
-                }else{
-                    console.log("No es un palindromo!");
-                }
-            }else{
-                console.log("No es un texto...", myText);
-            }
-            
-
+            palindromo(myText);
         </script>
     </body>
 </html>
