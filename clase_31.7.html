@@ -14,29 +14,21 @@
 
             let myText = "xyz1, xyz2, xyz3, xyz4 y xyz5";
 
-            function isString(text){
-                if(typeof text === 'string' || text instanceof String){ //comprueba si es un texto o una instancia de una clase String
-                    return true;    
-                }else{
-                    return false;
-                }
-            }
-
-            function eliminarPatron(text, patron){
+            const eliminarPatron = (text, patron)=>{
+                if(!text) return console.warn("El texto esta vacio");
+                if(!patron) return console.warn("El patron esta vacio");
+                if(text.length <= 1) return console.warn("El texto es muy corto");
+                if(patron.length <= 1) return console.warn("EL patron no es correcto");
+                if(!(typeof text === 'string' || text instanceof String))return console.error("La variable no es un texto");
+                if(!(typeof patron === 'string' || patron instanceof String))return console.error("La variable no es un texto");
+                
                 let temporal = text.split(" ");
-                let temporal2 = ""
-                for (let i = 0; i < temporal.length; i++) {
-                    temporal2 += " " + temporal[i].replace(patron, "")
-                }
-                return temporal2;               
+                let temporal2 = "";
+                for (let i = 0; i < temporal.length; i++) temporal2 += " " + temporal[i].replace(patron, "");
+                console.info("Texto completo: ", text);
+                console.info("Quitando el patron: ", temporal2);               
             }
-            
-            if(isString(myText)){
-                console.log(eliminarPatron(myText, "xyz"))
-            }else{
-                console.log("No es un texto...", myText);
-            }
-            
+            eliminarPatron(myText, "xyz");
 
         </script>
     </body>
